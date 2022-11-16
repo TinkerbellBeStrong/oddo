@@ -1,9 +1,6 @@
 <odoo>
     <data>
-
-
         <!-- Membuat View Tree/List Course -->
-
         <record id="training_course_view_tree" model="ir.ui.view">
             <field name="name">training.course.tree</field>
             <field name="model">training.course</field>
@@ -19,7 +16,6 @@
         </record>
 
         <!-- Membuat View Form Course -->
-
         <record id="training_course_view_form" model="ir.ui.view">
             <field name="name">training.course.form</field>
             <field name="model">training.course</field>
@@ -88,7 +84,6 @@
         </record>
 
         <!-- Membuat View Search Course -->
-
         <record id="training_course_view_search" model="ir.ui.view">
             <field name="name">training.course.search</field>
             <field name="model">training.course</field>
@@ -108,7 +103,6 @@
         </record>
 
         <!-- Membuat View Activity Session -->
-
         <record id="training_course_view_activity" model="ir.ui.view">
             <field name="name">training.course.activity</field>
             <field name="model">training.course</field>
@@ -128,7 +122,6 @@
         </record>
 
         <!-- Membuat Action/Event Course -->
-
         <record id="training_course_action" model="ir.actions.act_window">
             <field name="name">Course</field>
             <field name="res_model">training.course</field>
@@ -140,10 +133,7 @@
             </field>
         </record>
 
-
-
         <!-- Membuat View Tree/List Session -->
-
         <record id="training_session_view_tree" model="ir.ui.view">
             <field name="name">training.session.tree</field>
             <field name="model">training.session</field>
@@ -163,16 +153,15 @@
         </record>
 
         <!-- Membuat View Form Session -->
-
         <record id="training_session_view_form" model="ir.ui.view">
             <field name="name">training.session.form</field>
             <field name="model">training.session</field>
             <field name="arch" type="xml">
                 <form string="Session Form">
                     <header>
-                        <button name="action_confirm" type="object" string="Confirm" states="draft" class="btn-primary"/>
+                        <button name="action_confirm" type="object" string="Confirm" states="draft" groups="training_odoo.group_training_manager" class="btn-primary"/>
                         <button name="action_cancel" type="object" string="Cancel" states="open"/>
-                        <button name="action_close" type="object" string="Close" states="open" class="oe_highlight"/>
+                        <button name="action_close" type="object" string="Close" groups="training_odoo.group_training_manager" states="open" class="oe_highlight"/>
                         <field name="state" widget="statusbar" statusbar_visible="draft,open,done"/>
                     </header>
                     <sheet>
@@ -202,7 +191,6 @@
         </record>
 
         <!-- Membuat View Calendar Session -->
-
         <record id="training_session_view_form_calendar" model="ir.ui.view">
             <field name="name">training.session.calendar</field>
             <field name="model">training.session</field>
@@ -216,7 +204,6 @@
         </record>
 
         <!-- Membuat View Graph Session -->
-
         <record id="training_session_view_graph" model="ir.ui.view">
             <field name="name">training.session.graph</field>
             <field name="model">training.session</field>
@@ -231,7 +218,6 @@
         </record>
 
         <!-- Membuat View Pivot Session -->
-
         <record id="training_session_pivot_view" model="ir.ui.view">
             <field name="name">training.session.pivot</field>
             <field name="model">training.session</field>
@@ -245,7 +231,6 @@
         </record>
 
         <!-- Membuat View Kanban Session -->
-
         <record id="training_session_kanban_view" model="ir.ui.view">
             <field name="name">training.session.kanban</field>
             <field name="model">training.session</field>
@@ -318,7 +303,6 @@
         </record>
 
         <!-- Membuat Action/Event Session -->
-
         <record id="training_session_action" model="ir.actions.act_window">
             <field name="name">Session</field>
             <field name="res_model">training.session</field>
