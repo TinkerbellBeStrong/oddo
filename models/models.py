@@ -36,6 +36,9 @@ class TrainingCourse(models.Model):
         default = dict(default or {})
         default.update(name=("%s (copy)") % (self.name or ''))
         return super(TrainingCourse, self).copy(default)
+        
+    def action_print_course(self):
+        return self.env.ref('training_odoo.report_training_course_action').report_action(self)  
 
 
 class TrainingSession(models.Model):
@@ -116,6 +119,9 @@ class TrainingSession(models.Model):
         now = fields.Date.today()
         expired_ids = self.search([('end_date', '<', now), ('state', '=', 'open')])
         expired_ids.write({'state': 'done'})
+
+    def action_print_session(self):
+        return self.env.ref('training_odoo.report_training_session_action').report_action(self)   
 
 
 class TrainingAttendee(models.Model):

@@ -21,6 +21,9 @@
             <field name="model">training.course</field>
             <field name="arch" type="xml">
                 <form string="Course Form">
+                    <header>
+                        <button name="action_print_course" type="object" string="Print Course" class="oe_highlight"/>
+                    </header>
                     <sheet>
                         <div class="oe_title">
                             <h1>
@@ -159,6 +162,7 @@
             <field name="arch" type="xml">
                 <form string="Session Form">
                     <header>
+                        <button name="action_print_session" type="object" string="Print Session" states="open" class="oe_highlight"/>
                         <button name="action_confirm" type="object" string="Confirm" states="draft" groups="training_odoo.group_training_manager" class="btn-primary"/>
                         <button name="action_cancel" type="object" string="Cancel" states="open"/>
                         <button name="action_close" type="object" string="Close" groups="training_odoo.group_training_manager" states="open" class="oe_highlight"/>

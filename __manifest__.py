@@ -23,10 +23,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail', 'report_xlsx'],
 
     # always loaded
     'data': [
+        'report/report_training_session.xml',
+        'report/report_action.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/sequence_data.xml',
